@@ -28,7 +28,19 @@ export default function Page() {
               />
               {/* Name and profile pic overlaying the image */}
               <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-row justify-between items-end">
-                <div className="gap-1 flex flex-col">
+                <div className="gap-2 flex flex-col">
+                  {/* Open for Work badge */}
+                  <BlurFade delay={BLUR_FADE_DELAY * 3}>
+                    <div className="mt-1 inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 rounded-full px-3 py-1.5 w-fit">
+                      <span className="relative flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                      </span>
+                      <span className="text-emerald-700 dark:text-emerald-300 text-sm font-medium">
+                        Open for Work
+                      </span>
+                    </div>
+                  </BlurFade>
                   <BlurFadeText
                     delay={BLUR_FADE_DELAY * 2}
                     className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl text-white drop-shadow-lg"
@@ -75,6 +87,54 @@ export default function Page() {
       </section>
       */}
 
+      <section id="projects">
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <ProjectsSection />
+        </BlurFade>
+      </section>
+      <section id="hackathons">
+        <BlurFade delay={BLUR_FADE_DELAY * 13}>
+          <HackathonsSection />
+        </BlurFade>
+      </section>
+      <section id="hire-me">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
+            <h2 className="text-xl font-bold">Hire Me</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
+            <p className="text-muted-foreground leading-relaxed">
+              I&apos;m currently available for internships, full-time
+              opportunities, and freelance projects. If you&apos;re looking for
+              someone passionate, skilled, and ready to contribute, I&apos;m
+              here to help bring your ideas to life!
+            </p>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
+            <Link
+              href={`mailto:${DATA.contact.email}`}
+              className="inline-flex items-center gap-2 border border-border rounded-lg px-4 py-2 text-sm font-medium hover:bg-muted transition-colors w-fit"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="size-4"
+              >
+                <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+              Hire Me
+            </Link>
+          </BlurFade>
+        </div>
+      </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
@@ -98,16 +158,6 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
-      <section id="projects">
-        <BlurFade delay={BLUR_FADE_DELAY * 11}>
-          <ProjectsSection />
-        </BlurFade>
-      </section>
-      <section id="hackathons">
-        <BlurFade delay={BLUR_FADE_DELAY * 13}>
-          <HackathonsSection />
-        </BlurFade>
       </section>
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-6">
