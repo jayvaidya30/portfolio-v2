@@ -18,26 +18,39 @@ export default function Page() {
     <main className="min-h-dvh flex flex-col gap-14 relative">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
-            <div className="gap-2 flex flex-col order-2 md:order-1">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
-              />
-              <BlurFadeText
-                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+          {/* Twitter-style header */}
+          <BlurFade delay={BLUR_FADE_DELAY}>
+            <div className="relative">
+              {/* Header background image */}
+              <div className="w-full h-32 sm:h-40 md:h-48 rounded-xl overflow-hidden">
+                <img
+                  src="/fafo.webp"
+                  alt="Header background"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Profile picture overlaying the header - positioned on the right */}
+              <div className="absolute -bottom-12 right-4 sm:right-6">
+                <Avatar className="size-24 md:size-28 border-4 border-background rounded-full shadow-lg">
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </div>
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
-            </BlurFade>
+          </BlurFade>
+          {/* Name and description on the left */}
+          <div className="pt-8 gap-2 flex flex-col">
+            <BlurFadeText
+              delay={BLUR_FADE_DELAY * 2}
+              className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
+              yOffset={8}
+              text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
+            />
+            <BlurFadeText
+              className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
+              delay={BLUR_FADE_DELAY * 2}
+              text={DATA.description}
+            />
           </div>
         </div>
       </section>
