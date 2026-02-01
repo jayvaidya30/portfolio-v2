@@ -17,41 +17,37 @@ export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
-          {/* Twitter-style header */}
+        <div className="mx-auto w-full max-w-2xl">
+          {/* Header banner image with overlapping name/profile */}
           <BlurFade delay={BLUR_FADE_DELAY}>
-            <div className="relative">
-              {/* Header background image */}
-              <div className="w-full h-32 sm:h-40 md:h-48 rounded-xl overflow-hidden">
-                <img
-                  src="/fafo.webp"
-                  alt="Header background"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Profile picture overlaying the header - positioned on the right */}
-              <div className="absolute -bottom-12 right-4 sm:right-6">
-                <Avatar className="size-24 md:size-28 border-4 border-background rounded-full shadow-lg">
+            <div className="relative w-full h-80 sm:h-96 md:h-[28rem] rounded-xl overflow-hidden">
+              <img
+                src="/fafo1.webp"
+                alt="Header background"
+                className="w-full h-full object-cover opacity-40"
+              />
+              {/* Name and profile pic overlaying the image */}
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-row justify-between items-end">
+                <div className="gap-1 flex flex-col">
+                  <BlurFadeText
+                    delay={BLUR_FADE_DELAY * 2}
+                    className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl text-white drop-shadow-lg"
+                    yOffset={8}
+                    text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
+                  />
+                  <BlurFadeText
+                    className="text-white/90 max-w-[600px] md:text-lg lg:text-xl drop-shadow-md"
+                    delay={BLUR_FADE_DELAY * 2}
+                    text={DATA.description}
+                  />
+                </div>
+                <Avatar className="size-20 md:size-24 border-4 border-white/20 rounded-full shadow-lg">
                   <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                   <AvatarFallback>{DATA.initials}</AvatarFallback>
                 </Avatar>
               </div>
             </div>
           </BlurFade>
-          {/* Name and description on the left */}
-          <div className="pt-8 gap-2 flex flex-col">
-            <BlurFadeText
-              delay={BLUR_FADE_DELAY * 2}
-              className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
-              yOffset={8}
-              text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
-            />
-            <BlurFadeText
-              className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
-              delay={BLUR_FADE_DELAY * 2}
-              text={DATA.description}
-            />
-          </div>
         </div>
       </section>
       <section id="about">
