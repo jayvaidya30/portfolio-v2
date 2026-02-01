@@ -1,47 +1,52 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# Jay Vaidya - Portfolio
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+My personal portfolio website built with Next.js, [shadcn/ui](https://ui.shadcn.com/), and [Magic UI](https://magicui.design/).
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+🔗 **Live Site:** [jayvaidya.site](https://jayvaidya.site)
 
-# Features
+## Tech Stack
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+- **Framework:** Next.js 16, React 19, TypeScript
+- **Styling:** Tailwind CSS 4, shadcn/ui, Magic UI
+- **Animations:** Framer Motion
+- **Content:** Content Collections, MDX
+- **Deployment:** Vercel
 
-# Getting Started Locally
+## Features
 
-1. Clone this repository to your local machine:
+- ⚡ Fast and responsive design
+- 📝 Blog with MDX support
+- 🎨 Dark/Light mode toggle
+- 🖼️ Dynamic Open Graph images
+- 📱 Mobile-friendly
+
+## Getting Started
+
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dillionverma/portfolio
+   git clone https://github.com/jayvaidya30/portfolio-v2
+   cd portfolio-v2
    ```
 
-2. Move to the cloned directory
-
-   ```bash
-   cd portfolio
-   ```
-
-3. Install dependencies:
+2. Install dependencies:
 
    ```bash
    pnpm install
    ```
 
-4. Start the local Server:
+3. Start the development server:
 
    ```bash
    pnpm dev
    ```
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+4. Open [http://localhost:3000](http://localhost:3000)
 
-# License
+## Configuration
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+Edit [src/data/resume.tsx](./src/data/resume.tsx) to update your personal information, skills, projects, and work experience.
+
+## License
+
+Licensed under the [MIT License](./LICENSE).
