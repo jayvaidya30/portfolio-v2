@@ -24,7 +24,7 @@ export default function Page() {
               <img
                 src="/fafo1.webp"
                 alt="Header background"
-                className="w-full h-full object-cover opacity-40"
+                className="w-full h-full object-cover  dark:opacity-40"
               />
               {/* Name and profile pic overlaying the image */}
               <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-row justify-between items-end">
@@ -36,12 +36,12 @@ export default function Page() {
                     text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
                   />
                   <BlurFadeText
-                    className="text-white/90 max-w-[600px] md:text-lg lg:text-xl drop-shadow-md"
+                    className="text-white max-w-[600px] md:text-lg lg:text-xl drop-shadow-md"
                     delay={BLUR_FADE_DELAY * 2}
                     text={DATA.description}
                   />
                 </div>
-                <Avatar className="size-20 md:size-24 border-4 border-white/20 rounded-full shadow-lg">
+                <Avatar className="size-20 md:size-24 border-4 border-black/20 dark:border-white/20 rounded-full shadow-lg">
                   <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                   <AvatarFallback>{DATA.initials}</AvatarFallback>
                 </Avatar>
