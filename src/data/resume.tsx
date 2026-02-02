@@ -28,6 +28,7 @@ import Vercel from "@/components/ui/svgs/Vercel";
 import Zustland from "@/components/ui/svgs/Zustland";
 import Tanstack from "@/components/ui/svgs/Tanstack";
 import AWS from "@/components/ui/svgs/AWS";
+import Hono from "@/components/ui/svgs/Hono";
 
 export const DATA = {
   name: "Jay Vaidya",
@@ -51,6 +52,7 @@ export const DATA = {
     { name: "Redis", icon: Redis },
     { name: "SQL", icon: SQL },
     { name: "ExpressJS", icon: ExpressJs },
+    { name: "Hono", icon: Hono },
     { name: "Prisma", icon: Prisma },
     { name: "Tailwind", icon: Tailwind },
     { name: "Shadcn", icon: Shadcn },
