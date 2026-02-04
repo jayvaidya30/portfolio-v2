@@ -132,7 +132,7 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Saas",
+      title: "HireX",
       href: "https://x.com/jayvaidya30",
       dates: "2025 - Present",
       active: true,
