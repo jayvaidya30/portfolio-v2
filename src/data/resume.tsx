@@ -246,6 +246,53 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "RIFT'26 Hackathon",
+      dates: "2026",
+      location: "Offline",
+      description:
+        "Built a Graph-Based Financial Forensics Engine to detect hidden money muling rings through advanced graph analysis. Our solution processes CSV transactions via PostgreSQL and SQLAlchemy to detect routing cycles, smurfing patterns, and layered shell account chains.",
+      image: "/rift-hackathon.jpg",
+      links: [
+        {
+          title: "Github",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/BShubhamxx/pw-hack-money",
+        },
+        {
+          title: "LinkedIn",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "",
+        },
+      ],
+    },
+
+
+    {
+      title: "Tambo - The UI Strikes Back Hackathon",
+      dates: "2026",
+      location: "Online",
+      description:
+        "Built Tambo Lens, an intent-driven generative analytics platform for business databases. Enabled users to connect their databases, ask questions in plain English, and get instant visualizations. Built with Tambo AI, Next.js, and shadcn/ui.",
+      image:
+        "https://raw.githubusercontent.com/tambo-ai/tambo/main/assets/octo-white-background-rounded.png",
+      links: [
+        {
+          title: "Github",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/siddismyusername/tambo-lens",
+        },
+        {
+          title: "LinkedIn",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.linkedin.com/posts/jayvaidya30_ai-generativeui-hackathon-activity-7433763145120382976-1AdL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD5J2t4Bs3J202gaDjgGw-mgtLg5x_S21WE",
+        },
+      ],
+    },
+
+
+
+
+    {
       title: "Gemini 3 / Google DeepMind Hackathon",
       dates: "2026",
       location: "Online",
