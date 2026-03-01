@@ -261,7 +261,7 @@ export const DATA = {
         {
           title: "LinkedIn",
           icon: <Icons.globe className="h-4 w-4" />,
-          href: "",
+          href: "https://www.linkedin.com/posts/jayvaidya30_hackathon-rift26-building-activity-7433781663907672064-v94f?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD5J2t4Bs3J202gaDjgGw-mgtLg5x_S21WE",
         },
       ],
     },
