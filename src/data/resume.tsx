@@ -29,6 +29,7 @@ import Zustland from "@/components/ui/svgs/Zustland";
 import Tanstack from "@/components/ui/svgs/Tanstack";
 import AWS from "@/components/ui/svgs/AWS";
 import Hono from "@/components/ui/svgs/Hono";
+import Jest from "@/components/ui/svgs/Jest";
 
 export const DATA = {
   name: "Jay Vaidya",
@@ -66,6 +67,7 @@ export const DATA = {
     { name: "Docker", icon: Docker },
     { name: "Vercel", icon: Vercel },
     { name: "Linux", icon: Linux },
+    { name: "Jest", icon: Jest },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -108,16 +110,16 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "Kharedo",
+      href: "https://kharedo.in",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      title: "Full Stack & DevOps Engineer",
+      logoUrl: "/kharedo-logo.png",
+      start: "March 2026",
+      end: "Present",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Building scalable full-stack web applications and managing cloud infrastructure.",
     },
   ],
   education: [
@@ -143,9 +145,6 @@ export const DATA = {
         "Node.js",
         "PostgreSQL",
         "Tanstack Query",
-        "FastAPI",
-        "Python",
-        "VectorDB",
         "TypeScript",
         "TailwindCSS",
         "Prisma",
