@@ -76,6 +76,7 @@ export const metadata: Metadata = {
     description: DATA.description,
     card: "summary_large_image",
     creator: "@jayvaidya30",
+    site: "@jayvaidya30",
   },
   alternates: {
     canonical: DATA.url,
