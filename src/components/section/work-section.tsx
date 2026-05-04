@@ -23,11 +23,14 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
   return (
     <img
       src={src}
-      alt={alt}
+      alt={`${alt ? alt : "Company"} logo`}
       className={cn(
         "size-8 md:size-10 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none bg-background",
         alt === "Kharedo" ? "p-1.5 md:p-2" : "p-1"
       )}
+      loading="lazy"
+      width={40}
+      height={40}
       onError={() => setImageError(true)}
     />
   );

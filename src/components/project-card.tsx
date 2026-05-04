@@ -20,6 +20,9 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
       src={src}
       alt={alt}
       className="w-full h-48 object-cover"
+      loading="lazy"
+      width={400}
+      height={192}
       onError={() => setImageError(true)}
     />
   );

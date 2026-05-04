@@ -40,6 +40,11 @@ export const metadata: Metadata = {
     name: DATA.name,
   },
   creator: "@jayvaidya30",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
@@ -73,6 +78,10 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "",
+  },
+  other: {
+    "application-name": "Jay Vaidya Portfolio",
+    "theme-color": "#09090b",
   },
 };
 
