@@ -92,21 +92,43 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: DATA.name,
-    url: DATA.url,
-    jobTitle: "Full-stack and DevOps Engineer",
-    description: DATA.description,
-    sameAs: [
-      DATA.contact.social.GitHub.url,
-      DATA.contact.social.LinkedIn.url,
-      DATA.contact.social.X.url,
+    "@graph": [
+      {
+        "@type": "Person",
+        name: DATA.name,
+        url: DATA.url,
+        jobTitle: "Full-stack and DevOps Engineer",
+        description: DATA.description,
+        sameAs: [
+          DATA.contact.social.GitHub.url,
+          DATA.contact.social.LinkedIn.url,
+          DATA.contact.social.X.url,
+        ],
+        worksFor: {
+          "@type": "Organization",
+          name: "Kharedo",
+        },
+      },
+      {
+        "@type": "WebSite",
+        name: DATA.name,
+        url: DATA.url,
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${DATA.url}/search?q={search_term_string}`,
+        },
+      },
+      {
+        "@type": "Organization",
+        name: "Jay Vaidya Portfolio",
+        url: DATA.url,
+        sameAs: [
+          DATA.contact.social.GitHub.url,
+          DATA.contact.social.LinkedIn.url,
+          DATA.contact.social.X.url,
+        ],
+      },
     ],
-    worksFor: {
-      "@type": "Organization",
-      name: "Kharedo",
-    },
-    knowsAbout: DATA.skills.map((s) => s.name),
   };
 
   return (
